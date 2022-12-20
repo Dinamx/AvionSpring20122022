@@ -1,12 +1,10 @@
-package com.mix.voiturev5.controller;
+package com.mix.avion.controller;
 
-import com.mix.voiturev5.model.Administrateur;
-import com.mix.voiturev5.model.Token;
-import com.mix.voiturev5.model.Tutorial;
-import com.mix.voiturev5.model.Voiture;
-import com.mix.voiturev5.repository.AdministrateurRepository;
-import com.mix.voiturev5.repository.TokenRepository;
-import com.mix.voiturev5.service.TokenService;
+import com.mix.avion.model.Administrateur;
+import com.mix.avion.model.Token;
+import com.mix.avion.repository.AdministrateurRepository;
+import com.mix.avion.repository.TokenRepository;
+import com.mix.avion.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Adler32;
 
 @RestController
 @CrossOrigin

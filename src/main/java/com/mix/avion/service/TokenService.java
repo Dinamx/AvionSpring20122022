@@ -1,8 +1,7 @@
-package com.mix.voiturev5.service;
+package com.mix.avion.service;
 
-import com.mix.voiturev5.model.Administrateur;
-import com.mix.voiturev5.model.Token;
-import net.bytebuddy.asm.Advice;
+import com.mix.avion.model.Administrateur;
+import com.mix.avion.model.Token;
 
 import java.security.MessageDigest;
 import java.sql.Date;
