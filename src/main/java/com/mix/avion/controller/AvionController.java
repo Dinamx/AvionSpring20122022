@@ -59,4 +59,29 @@ public class AvionController {
         return "ok";
     }
 
+
+// Forme anle zaavtra ho alefa
+//    {
+//        "id": 1,
+//        "imageavion": "mix.jpg"
+//    }
+
+    @PostMapping("/avions/image")
+    public ResponseEntity<Avion> updateImage(@RequestBody Avion v) {
+        try {
+            System.out.println("Id " + v.getId() );
+            Avion temp = avionrepository.findAvionById(v.getId());
+            temp.setImageavion(v.getImageavion());
+
+            avionrepository.save(temp);
+            System.out.println("Image " + temp.getImageavion());
+
+
+//            avionrepository.save(v);
+            return new ResponseEntity<>(temp, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
