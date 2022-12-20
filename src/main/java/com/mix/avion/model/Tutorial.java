@@ -1,4 +1,4 @@
-package com.mix.voiturev5.model;
+package com.mix.avion.model;
 
 import javax.persistence.*;
 

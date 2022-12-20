@@ -1,7 +1,8 @@
-package com.mix.voiturev5.controller;
+package com.mix.avion.controller;
 
-import com.mix.voiturev5.model.Voiture;
-import com.mix.voiturev5.repository.VoitureRepository;
+
+import com.mix.avion.model.Avion;
+import com.mix.avion.repository.AvionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,18 +14,18 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-public class VoitureController {
+public class AvionController {
     @Autowired
-    VoitureRepository voitureRepository;
+    AvionRepository avionrepository;
 
-    @GetMapping("/voitures")
+    @GetMapping("/avions")
 //    public ResponseEntity<> getAllVoitures(@RequestParam(required = false) String title) {
-    public ResponseEntity<List<Voiture>> getAllVoitures(@RequestParam(required = false) String title) {
+    public ResponseEntity<List<Avion>> getAllVoitures(@RequestParam(required = false) String title) {
         try {
-            List<Voiture> voiture = new ArrayList<Voiture>();
+            List<Avion> voiture = new ArrayList<Avion>();
 
             if (title == null)
-                voitureRepository.findAll().forEach(voiture::add);
+                avionrepository.findAll().forEach(voiture::add);
             if (voiture.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
@@ -33,10 +34,10 @@ public class VoitureController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @PostMapping("/voitures")
-    public ResponseEntity<Voiture> insertVoiture(@RequestBody Voiture v) {
+    @PostMapping("/avions")
+    public ResponseEntity<Avion> insertVoiture(@RequestBody Avion v) {
         try {
-            voitureRepository.save(v);
+            avionrepository.save(v);
             return new ResponseEntity<>(v, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
