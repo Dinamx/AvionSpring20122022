@@ -1,4 +1,4 @@
-package com.mix.voiturev5;
+package com.mix.avion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

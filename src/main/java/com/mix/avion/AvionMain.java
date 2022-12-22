@@ -1,16 +1,12 @@
-package com.mix.voiturev5;
+package com.mix.avion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.mix.voiturev5.controller")
-public class Voiturev5 {
+@ComponentScan(basePackages = "com.mix.avion.controller")
+public class AvionMain {
 
 //	@Bean
 //	public WebMvcConfigurer corsConfigurer() {
@@ -25,7 +21,7 @@ public class Voiturev5 {
 //	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Voiturev5.class, args);
+		SpringApplication.run(AvionMain.class, args);
 	}
 
 }

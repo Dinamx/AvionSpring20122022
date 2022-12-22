@@ -1,10 +1,10 @@
-package com.mix.voiturev5.repository;
+package com.mix.avion.repository;
 
 import java.util.List;
 
+import com.mix.avion.model.Tutorial;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.mix.voiturev5.model.Tutorial;
 
 public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
   List<Tutorial> findByPublished(boolean published);
